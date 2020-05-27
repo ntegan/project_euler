@@ -1,0 +1,13 @@
+[package]
+name = "ai_nine"
+version = "0.1.0"
+authors = ["ntegan <nicholas.egan@starlab.io>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+regex = "1.3.7"
+
+[dependencies.zzz_print_problem_header]
+path = "../zzz_print_problem_header"
