@@ -100,8 +100,18 @@ done
 [[ ! "$last" ]] && echo uh oh && exit
 [[ ! "$next_prob_dir" ]] && echo uh oh && exit
 
-echo "$((lastprob + 1)) next prob"
 next_prob_dir="$(echo $next_prob_dir)"
 
 cp -r $last $next_prob_dir
 wget -o /dev/null -O "$next_prob_dir""/info.html" "$url""$((lastprob + 1))"
+
+
+# sed 's/\]/\t''"ag_seven"'',\n\]/g' Cargo.toml 
+#echo DBSERVERNAME     xxx | sed -rne 's/(dbservername)\s+\w+/\1 yyy/gip'
+#DBSERVERNAME yyy
+
+
+
+# add to workspace
+sed -i 's/^\]/    "'$next_prob_dir'",\n\]/g' Cargo.toml 
+sed  -i 's/name = ".*"/name = "'$next_prob_dir'"/g' $next_prob_dir/Cargo.toml 
