@@ -4,4 +4,6 @@ members = [
     "ab_two",
     "ac_three",
     "ad_four",
+    "ae_five",
+    "af_six",
 ]
