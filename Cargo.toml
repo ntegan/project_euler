@@ -1,4 +1,6 @@
 [workspace]
 members = [
     "aa_one",
+    "ab_two",
+    "ac_three",
 ]
